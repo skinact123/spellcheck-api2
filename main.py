@@ -6,7 +6,7 @@ app = FastAPI()
 sym_spell = SymSpell(max_dictionary_edit_distance=2)
 sym_spell.load_dictionary("frequency_dictionary_en_82_765.txt", term_index=0, count_index=1)
 
-VERIFICATION_TOKEN = "spaandequipment123"  # you can set any token you like
+VERIFICATION_TOKEN = "spaandequipment123"  # <-- you can set this anything you want
 
 @app.get("/verify")
 async def verify(verification_token: str):
